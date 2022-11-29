@@ -1,0 +1,295 @@
+* {
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0 15%;
+    background-color: #1b1b32;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    list-style: none;
+    
+}
+
+h1,
+h2,
+h3,
+a,
+li,
+p,
+legend,
+label {
+    color: #eee !important;
+}
+
+.wrapper {
+    padding-top: 2vh;
+    width: 100%;
+}
+
+header {
+    height: 40vh;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+header .image-container {
+    border: 2px solid #eee;
+    position: relative;
+    height: 35vh;
+    background-image: url("https://eecs.oregonstate.edu/sites/eecs.oregonstate.edu/files/images/cybersecurity-1200x450.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.credentials h1{
+    font-weight: 500;
+    font-size: 45px;
+    letter-spacing: 1.5px;
+}
+
+.credentials h3 {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+header .image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.548);
+}
+
+header .image-container > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 30px 0 0 50px;
+}
+nav {
+    background-color: rgba(1, 1, 24, 0.463);
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-links {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-links li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-links a {
+    text-decoration: none;
+    padding: 10px 30px;
+    text-align: center;
+    transition: 0.2s;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+}
+
+.nav-links a:hover {
+    background-color: rgba(238, 238, 238, 0.299);
+}
+.nav-links span {
+    border: 1px solid rgba(238, 238, 238, 0.445);
+}
+
+/* Content CSS */
+/* Content CSS */
+
+.content {
+    line-height: 1.6;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-bottom: 5rem;
+    margin-bottom: 5rem;
+    border-bottom: 2px solid rgba(238, 238, 238, 0.3);
+}
+
+.content .side-section,
+.content .grid-content {
+    padding: 1rem 2rem;
+}
+.content .side-section h3,
+.content .grid-content h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.side-section > section ul {
+    list-style: disc !important;
+    margin: 0 0 10px 10px;
+}
+
+.side-section > section li {
+    margin-top: 5px;
+}
+
+.side-section > section li a,
+.side-section > section p {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+/* Grid content */
+/* Grid content */
+
+.grid-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+        "gallery gallery"
+        "subscription services";
+}
+
+.side-section section:nth-child(2) {
+    margin-top: 30px !important;
+}
+
+.gallery,
+.subscription,
+.other-services {
+    padding: 10px;
+}
+.gallery h3,
+.subscription h3,
+.other-services h3 {
+    font-size: 30px !important;
+}
+.gallery p,
+.subscription p,
+.other-services p {
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.gallery p {
+    border-top: 2px solid rgba(238, 238, 238, 0.3);
+    padding-top: 15px;
+    margin-top: 10px;
+}
+
+.subscription button,
+.other-services button {
+    padding: 15px 25px;
+    opacity: .9;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #3b3b4f;
+    color: #eee;
+    border: 0;
+    transition: .2s;
+}
+.subscription button:hover,
+.other-services button:hover{
+    opacity: 1;
+    background-color: #40404f;
+}
+.gallery {
+    grid-area: gallery;
+}
+.subscription {
+    grid-area: subscription;
+}
+.other-services {
+    grid-area: services;
+    border-left: 2px solid rgba(238, 238, 238, 0.3);
+    padding-left: 20px;
+}
+
+/* Form CSS */
+/* Form CSS */
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 5rem;
+    font-size: 35px;
+}
+form {
+    border: 2px solid rgba(238, 238, 238, 0.3);
+    padding: 1rem;
+    border-radius:10px ;
+    box-shadow: 2px 2px 30px rgba(142, 115, 115, 0.068);
+    max-width: 800px;
+    min-width: 500px;
+    margin: 0 auto;
+    padding-bottom: 2em;
+}
+
+fieldset {
+    border: none;
+    padding: 2rem 0;
+}
+
+fieldset:not(:last-of-type) {
+    border-bottom: 3px solid #3b3b4f;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 25px;
+}
+
+input,
+textarea{
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 3em;
+}
+
+input,
+textarea {
+    background-color: #0a0a23;
+    border: 1px solid #0a0a23;
+    color: #ffffff;
+}
+
+.inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 60%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: #3b3b4f;
+    border-color: white;
+    min-width: 300px;
+}
+
+input[type="file"] {
+    padding: 1px 2px;
+}
+/* Footer  */
+/* Footer  */
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+}
